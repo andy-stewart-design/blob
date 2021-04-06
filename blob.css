@@ -1,10 +1,18 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 * {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
   
 body {
@@ -14,9 +22,15 @@ body {
 section {
     position: relative;
     min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 section.lt {
@@ -28,7 +42,8 @@ div.sectionBreak {
     width: 100%;
     height: 120px;
     background: #F1E7DC;
-    clip-path: url(#clipPathSectTopLg);
+    -webkit-clip-path: url(#clipPathSectTopLg);
+            clip-path: url(#clipPathSectTopLg);
 }
 
 .imageWrap {
@@ -42,33 +57,41 @@ div.sectionBreak {
     width: 120px;
     height: 120px;
     background: #f76c5e;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); 
-    animation: badgeBob 2s alternate infinite ease-in-out;
-    clip-path: path("M61.8,118.1C28.2,117.6,1.5,93.4,2,64.1C2.6,28.6,26.8,1.2,57.7,1.9c33.8,0.8,61.8,23.1,60.2,60 C116.6,92.6,93.7,118.8,61.8,118.1z");
+    -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); 
+    -webkit-animation: badgeBob 2s alternate infinite ease-in-out; 
+            animation: badgeBob 2s alternate infinite ease-in-out;
+    -webkit-clip-path: path("M61.8,118.1C28.2,117.6,1.5,93.4,2,64.1C2.6,28.6,26.8,1.2,57.7,1.9c33.8,0.8,61.8,23.1,60.2,60 C116.6,92.6,93.7,118.8,61.8,118.1z");
+            clip-path: path("M61.8,118.1C28.2,117.6,1.5,93.4,2,64.1C2.6,28.6,26.8,1.2,57.7,1.9c33.8,0.8,61.8,23.1,60.2,60 C116.6,92.6,93.7,118.8,61.8,118.1z");
 }
 
 img.clip {
     position: relative;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 img.clipHero {
     width: 100vw;
     height: 100vh;
-    clip-path: url(#clipPathHeroMob);
+    -webkit-clip-path: url(#clipPathHeroMob);
+            clip-path: url(#clipPathHeroMob);
 }
 
 img.clipCirc {
     width: 90vw;
     height: 90vw;
-    clip-path: url(#clipPathCirc);
+    -webkit-clip-path: url(#clipPathCirc);
+            clip-path: url(#clipPathCirc);
 }
 
 img.clipRect {
     width: 90vw;
     height: 60vw;
-    object-position: center top;
-    clip-path: url(#clipPathRect);
+    -o-object-position: center top;
+       object-position: center top;
+    -webkit-clip-path: url(#clipPathRect);
+            clip-path: url(#clipPathRect);
 }
 
 .blobMask {
@@ -88,7 +111,8 @@ img.clipRect {
         right: 2.5rem;
         width: 160px;
         height: 160px;
-        clip-path: path("M82.4,158.2C37.2,157.4,1.4,125,2,85.5C2.8,37.8,35.3,0.9,76.9,1.8c45.5,1,83.1,31,81,80.7 C156.2,123.9,125.3,159.1,82.4,158.2z");
+        -webkit-clip-path: path("M82.4,158.2C37.2,157.4,1.4,125,2,85.5C2.8,37.8,35.3,0.9,76.9,1.8c45.5,1,83.1,31,81,80.7 C156.2,123.9,125.3,159.1,82.4,158.2z");
+                clip-path: path("M82.4,158.2C37.2,157.4,1.4,125,2,85.5C2.8,37.8,35.3,0.9,76.9,1.8c45.5,1,83.1,31,81,80.7 C156.2,123.9,125.3,159.1,82.4,158.2z");
     }
 } 
 
@@ -101,10 +125,12 @@ img.clipRect {
         right: 2rem;
         width: 160px;
         height: 160px;
-        clip-path: path("M82.4,158.2C37.2,157.4,1.4,125,2,85.5C2.8,37.8,35.3,0.9,76.9,1.8c45.5,1,83.1,31,81,80.7 C156.2,123.9,125.3,159.1,82.4,158.2z");
+        -webkit-clip-path: path("M82.4,158.2C37.2,157.4,1.4,125,2,85.5C2.8,37.8,35.3,0.9,76.9,1.8c45.5,1,83.1,31,81,80.7 C156.2,123.9,125.3,159.1,82.4,158.2z");
+                clip-path: path("M82.4,158.2C37.2,157.4,1.4,125,2,85.5C2.8,37.8,35.3,0.9,76.9,1.8c45.5,1,83.1,31,81,80.7 C156.2,123.9,125.3,159.1,82.4,158.2z");
     }
     img.clipHero {
-        clip-path: url(#clipPathHeroDesk);
+        -webkit-clip-path: url(#clipPathHeroDesk);
+                clip-path: url(#clipPathHeroDesk);
     }
     img.clipCirc {
         width: 50vw;
@@ -124,11 +150,24 @@ img.clipRect {
     }
 } 
 
-@keyframes badgeBob {
+@-webkit-keyframes badgeBob {
     0% {
-        transform: translate(.5rem, -.5rem);
+        -webkit-transform: translate(.5rem, -.5rem);
+                transform: translate(.5rem, -.5rem);
     }
     100% {
-        transform: translate(-.5rem, .5rem);
+        -webkit-transform: translate(-.5rem, .5rem);
+                transform: translate(-.5rem, .5rem);
+    }
+} 
+
+@keyframes badgeBob {
+    0% {
+        -webkit-transform: translate(.5rem, -.5rem);
+                transform: translate(.5rem, -.5rem);
+    }
+    100% {
+        -webkit-transform: translate(-.5rem, .5rem);
+                transform: translate(-.5rem, .5rem);
     }
 }

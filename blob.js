@@ -1,11 +1,12 @@
 import { spline } from "https://cdn.skypack.dev/@georgedoescode/spline@1.0.1";
 import SimplexNoise from "https://cdn.skypack.dev/simplex-noise@2.4.0";
-import { pointsCirc, pointsRect, pointsHeroDesk, pointsHeroMob } from "./js/points.js"
+import { pointsCirc, pointsRect, pointsHeroDesk, pointsHero2Desk, pointsHeroMob } from "./js/points.js"
 import { sectTopStates } from "./js/paths.js"
 
 const pathCirc = document.querySelector(".circ path");
 const pathRect = document.querySelector(".rect path");
 const pathHeroDesk = document.querySelector(".heroDesk path");
+const pathHero2Desk = document.querySelector(".hero2Desk path");
 const pathHeroMob = document.querySelector(".heroMob path");
 
 let noiseStep = 0.0015;
@@ -61,6 +62,27 @@ function noise(x, y) {
   requestAnimationFrame(animateRect);
 })();
 
+(function animateHeroMob() {
+  pathHeroMob.setAttribute("d", spline(pointsHeroMob, 1.2, true));
+
+  for (let i = 0; i < pointsHeroMob.length; i++) {
+    const point = pointsHeroMob[i];
+
+    const nX = noise(point.noiseOffsetX, point.noiseOffsetX);
+    const nY = noise(point.noiseOffsetY, point.noiseOffsetY);
+    const x = map(nX, -1, 1, point.originX - 7, point.originX + 7);
+    const y = map(nY, -1, 1, point.originY - 7, point.originY + 7);
+
+    point.x = x;
+    point.y = y;
+
+    point.noiseOffsetX += noiseStep;
+    point.noiseOffsetY += noiseStep;
+  }
+
+  requestAnimationFrame(animateHeroMob);
+})();
+
 (function animateHeroDesk() {
   pathHeroDesk.setAttribute("d", spline(pointsHeroDesk, 1.2, true));
 
@@ -82,16 +104,16 @@ function noise(x, y) {
   requestAnimationFrame(animateHeroDesk);
 })();
 
-(function animateHeroMob() {
-  pathHeroMob.setAttribute("d", spline(pointsHeroMob, 1.2, true));
+(function animateHero2Desk() {
+  pathHero2Desk.setAttribute("d", spline(pointsHero2Desk, 1.2, true));
 
-  for (let i = 0; i < pointsHeroMob.length; i++) {
-    const point = pointsHeroMob[i];
+  for (let i = 0; i < pointsHero2Desk.length; i++) {
+    const point = pointsHero2Desk[i];
 
     const nX = noise(point.noiseOffsetX, point.noiseOffsetX);
     const nY = noise(point.noiseOffsetY, point.noiseOffsetY);
-    const x = map(nX, -1, 1, point.originX - 7, point.originX + 7);
-    const y = map(nY, -1, 1, point.originY - 7, point.originY + 7);
+    const x = map(nX, -1, 1, point.originX - 10, point.originX + 10);
+    const y = map(nY, -1, 1, point.originY - 10, point.originY + 10);
 
     point.x = x;
     point.y = y;
@@ -100,7 +122,7 @@ function noise(x, y) {
     point.noiseOffsetY += noiseStep;
   }
 
-  requestAnimationFrame(animateHeroMob);
+  requestAnimationFrame(animateHero2Desk);
 })();
 
 anime({

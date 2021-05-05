@@ -71,7 +71,8 @@ img.clip {
        object-fit: cover;
 }
 
-img.clipHero {
+img.clipHero,
+img.clipHero2 {
     width: 100vw;
     height: 100vh;
     -webkit-clip-path: url(#clipPathHeroMob);
@@ -131,6 +132,12 @@ img.clipRect {
     img.clipHero {
         -webkit-clip-path: url(#clipPathHeroDesk);
                 clip-path: url(#clipPathHeroDesk);
+    }
+    img.clipHero2 {
+        width: 85vw;
+        margin-left: 15vw;
+        -webkit-clip-path: url(#clipPathHero2Desk);
+                clip-path: url(#clipPathHero2Desk);
     }
     img.clipCirc {
         width: 50vw;

@@ -189,4 +189,55 @@ const pointsHeroDesk = [
     }
 ];
 
-export { pointsCirc, pointsRect, pointsHeroDesk, pointsHeroMob }
+const pointsHero2Desk = [
+    {
+        "x": 220,
+        "y": 170,
+        "originX": 220,
+        "originY": 170,
+        "noiseOffsetX": 558.0054507166818,
+        "noiseOffsetY": 349.83067313484526
+    },
+    {
+        "x": 80,
+        "y": 170,
+        "originX": 80,
+        "originY": 170,
+        "noiseOffsetX": 405.21496962909123,
+        "noiseOffsetY": 687.5832743094305
+    },
+    {
+        "x": 15,
+        "y": 60,
+        "originX": 15,
+        "originY": 60,
+        "noiseOffsetX": 148.27632266015266,
+        "noiseOffsetY": 700.6666840437977
+    },
+    {
+        "x": 60,
+        "y": -50,
+        "originX": 60,
+        "originY": -50,
+        "noiseOffsetX": 543.8732046468922,
+        "noiseOffsetY": 948.3602990549396
+    },
+    {
+        "x": 200,
+        "y": -10,
+        "originX": 200,
+        "originY": -10,
+        "noiseOffsetX": 48.40367548042579,
+        "noiseOffsetY": 684.8607444860912
+    },
+    {
+        "x": 230,
+        "y": 100,
+        "originX": 230,
+        "originY": 100,
+        "noiseOffsetX": 276.56017522498774,
+        "noiseOffsetY": 973.3632880698875
+    }
+];
+
+export { pointsCirc, pointsRect, pointsHeroDesk, pointsHero2Desk, pointsHeroMob }
